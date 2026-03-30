@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>IIDAI</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+<body>
+
+<div id="navbar"></div>
+<div class="overlay-menu"></div>
+
+
+<script src="script.js"></script>
+<script id="nav-scroll">
+window.addEventListener("scroll", function () {
+    const nav = document.querySelector("nav");
+
+    if (window.scrollY > 50) {
+        nav.classList.add("scrolled");
+    } else {
+        nav.classList.remove("scrolled");
+    }
+});
+</script>
+
+<header class="banner">
+
+    <div class="overlay">
+
+        <div class="logos">
+                <img src="img/logo-uns20.png" class="logo1">
+                <img src="img/logo_infor.png" class="logo2">
+                <img src="img/logo-iidai.png" class="logo3">
+        </div>
+
+        <div class="texto">
+            <h1>UNIVERSIDAD NACIONAL "SIGLO XX"</h1>
+            <h2>INGENIERÍA INFORMÁTICA</h2>
+            <h3>INSTITUTO DE INVESTIGACIÓN IDAII</h3>
+        </div>
+
+    </div>
+
+    <div class="robot-container">
+        <model-viewer 
+            src="robot.glb"
+            autoplay
+            camera-controls
+            class="robot">
+        </model-viewer>
+    </div>
+
+</header>
+
+<section class="contenido">
+    <p>Bienvenido al sitio oficial.</p>
+</section>
+
+
+</body>
+</html>
